@@ -1,0 +1,200 @@
+<form name="vehicle-details" method="POST" class="row mt-5">
+  <div class="col-md-6 mb-5">
+    <legend>APPLICANT'S PERSONAL DETAILS</legend>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="first-name">FIRST NAME</label>
+        <input type="text" class="form-control" id="first-name" placeholder="First Name">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="middle-name">MIDDLE NAME</label>
+        <input type="text" class="form-control" id="middle-name" placeholder="Middle Name">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="last-name">LAST NAME</label>
+        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone-number">PHONE NUMBER</label>
+      <div class="">
+        <i class="fah fah-phone"></i>
+        <input type="text" class="form-control" id="phone-number" placeholder="Phone Number">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="state">STATE</label>
+        <select name="state" class="form-control" id="state" placeholder="State of Origin">
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="license-office">LICENSE OFFICE</label>
+        <select name="license-offic" class="form-control" id="license-office" placeholder="License Office">
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-5">
+    <legend>OWNERSHIP DETAILS</legend>
+    <div class="form-group">
+      <label for="vendor">VENDOR NAME</label>
+      <input type="text" class="form-control" id="vendor" placeholder="Vendor Name">
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="purchase-nature">NATURE OF PURCHASE</label>
+        <select name="purchase-nature" class="form-control" id="purchase-nautre" placeholder="Nature of Purchase">
+          <option>-Select-</option>
+          <option>Brand New</option>
+          <option>Used</option>
+          <option>Belgium</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="date-purchase">DATE PURCHASED</label>
+        <input type="date" class="form-control" id="date-purchase" placeholder="Date Purchase">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="year-manufactured">YEAR MANUFACTURED</label>
+        <input type="text" class="form-control" id="man-year" year-manufactured="Year Manufactured" placeholder="Year Manufactured"
+        />
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="v-intended-use">INTENDED USE</label>
+        <select name="v-intended-use" class="form-control" id="v-intended-use" placeholder="Vehicle Intended Use">
+          <option>-Select-</option>
+          <option>Private</option>
+          <option>Commercial</option>
+          <option>Government</option>
+          <option>Military</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-5">
+    <legend>PHYSICAL VEHICLE DETAILS</legend>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="v-vendor">MAKE</label>
+        <input type="text" class="form-control" id="make" placeholder="Vehicle Make">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="v-model">MODEL</label>
+        <input name="v-model" class="form-control" id="model" placeholder="Vehicle Model">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="v-type">TYPE</label>
+        <select type="date" name="v-type" class="form-control" id="v-type" placeholder="Vehicle Type">
+          <option>-Choose Vehicle Type-</option>
+          <option>...</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="v-color">YEAR MANUFACTURED</label>
+        <input type="text" name="v-color" class="form-control" id="v-color" placeholder="Vehicle Color" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="v-inspection-cert-number">INSPECTION CERT. NUMBER</label>
+        <input type="text" name="v-inspection-cert-number" class="form-control" id="v-inspection-cert-number" placeholder="Inspection Certificate Number"
+        />
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="v-inspection-cert-date">DATE OBTAINED (CERT.)</label>
+        <input type="text" name="v-inspection-cert-date" class="form-control" id="v-inspection-cert-date" placeholder="Inspection Certificate Date"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="v-passengers-count">NUMBER OF PASSENGERS</label>
+      <input type="number" class="form-control" name="v-passengers-count" id="v-passengers-count" placeholder="Number of passengers authorised to carry"
+      />
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="v-net-weight">NET WEIGHT</label>
+        <input type="number" name="v-net-weight" class="form-control" id="v-net-weight" placeholder="Vehicle Net Weight" />
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="v-gross-weight">GROSS WEIGHT</label>
+        <input type="number" name="v-gross-weight" class="form-control" id="v-gross-weight" placeholder="Vehicle Gross Weight" />
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="v-axle-weight">AXLE WEIGHT</label>
+        <input type="number" name="v-axle-weight" class="form-control" id="v-axle-weight" placeholder="Vehicle Axle Weight" />
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-5">
+    <legend>VEHICLE ENGINE DETAILS</legend>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="v-engine-number">ENGINE NUMBER</label>
+        <input type="text" class="form-control" name="v-engine-number" id="v-engine-number" placeholder="Vehicle Engine Number">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="v-engine-capacity">ENGINE CAPACITY</label>
+        <input type="text" name="v-engine-capacity" class="form-control" id="v-engine-capacity" placeholder="Vehicle Model">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="v-chasis-number">CHASIS NUMBER</label>
+        <input type="text" name="v-chasis-number" class="form-control" id="v-chasis-number" placeholder="Vehicle Chasis Number" />
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="v-cylinder-count">NUMBER OF CYLINDERS</label>
+        <input type="text" name="v-cylinder-count" class="form-control" id="v-cylinder-count" placeholder="Number of Cylinders" />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <legend>DECLARATION</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          I declare that the information provided in this application is true and binding on me.
+        </label>
+      </div>
+      <br />
+      <br />
+      <button type="submit" class="btn btn-success">Submit Application</button>
+    </div>
+  </div>
+</form>
