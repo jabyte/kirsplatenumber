@@ -1,11 +1,11 @@
 ///<reference path="../../node_modules/@angular/forms/src/form_providers.d.ts"/>
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
-import {CustomerService} from './services/customer.service';
+import { CustomerService } from './services/customer.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,77 +24,88 @@ import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PreviewComponent } from './preview/preview.component';
 import { LandingComponent } from './landing/landing.component';
+import { PlateNumbersComponent } from './plate-numbers/plate-numbers.component';
 
 const routes = [
-    {
-      path: '',
-      component: HomeComponent
-    },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
 
-    {
-      path: 'register',
-      component: RegistrationComponent
-    },
+  {
+    path: '',
+    component: HomeComponent
+  },
 
-    {
-      path: 'login',
-      component: LoginComponent
-    },
+  {
+    path: 'register',
+    component: RegistrationComponent
+  },
 
-    {
-      path: 'available',
-      component: AvailableComponent
-    },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
 
-    {
-      path: 'dashboard',
-      component: DashboardComponent
-    },
+  {
+    path: 'available',
+    component: AvailableComponent
+  },
 
-    {
-      path: 'physical',
-      component: PhysicalComponent
-    },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
 
-    {
-      path: 'ownership',
-      component: OwnershipComponent
-    },
+  {
+    path: 'physical',
+    component: PhysicalComponent
+  },
 
-    {
-      path: 'engine',
-      component: EngineComponent
-    },
+  {
+    path: 'ownership',
+    component: OwnershipComponent
+  },
 
-    {
-      path: 'about',
-      component: AboutComponent
-    },
+  {
+    path: 'engine',
+    component: EngineComponent
+  },
 
-    {
-      path: 'contact',
-      component: ContactComponent
-    },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
 
-    {
-      path: 'help',
-      component: HelpComponent
-    },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
 
-    {
-      path: 'preview',
-      component: PreviewComponent
-    },
+  {
+    path: 'help',
+    component: HelpComponent
+  },
 
-    {
-      path: 'index',
-      component: LandingComponent
-    },
+  {
+    path: 'preview',
+    component: PreviewComponent
+  },
 
-    {
-      path: '**',
-      component: NotFoundComponent
-    }
+  {
+    path: 'index',
+    component: LandingComponent
+  },
+
+  {
+    path: 'platenumbers',
+    component: PlateNumbersComponent
+  },
+
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];
 
 @NgModule({
@@ -116,6 +127,7 @@ const routes = [
     NotFoundComponent,
     PreviewComponent,
     LandingComponent,
+    PlateNumbersComponent,
   ],
   imports: [
     BrowserModule,

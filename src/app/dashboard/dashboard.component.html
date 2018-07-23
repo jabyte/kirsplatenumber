@@ -1,46 +1,68 @@
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-header justify-content-center">
-        <h6 class="card-title text-center font-weight-bold">MY PROFILE</h6>
-        <div style="border-radius: 50%;">
-          <div class="justify-content-center">
-            <img src="../../assets/images/jabyte.png" class="rounded-circle mx-auto d-block img-fluid img-thumbnail width: 70%" alt="User Pic">
-            <span class="figure-caption align-content-center">Change</span>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <div class="card-header justify-content-center">
+          <div style="border-radius: 50%;">
+            <div class="justify-content-center">
+              <img src="../../../assets/img/jabyte.png" class="rounded-circle mx-auto d-block img-fluid img-thumbnail width: 50%" alt="User Pic">
+              <span class="figure-caption text-center">Change</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card-body">
-        <p class="">NAME: </p>
-        <p class="">PHONE NUMBER: </p>
-        <p class="">EMAIL: </p>
-        <p class="">ADDRESS: </p>
-      </div>
 
-      <div class="card-footer text-muted justify-content-center">
-        <a href="" class="font-weight-bold">Edit Profile</a>
+        <div class="card-body">
+          <p class="font-weight-bold">Name: </p>
+          <p class="font-weight-bold">Phone Number: </p>
+          <p class="font-weight-bold">Email: </p>
+          <p class="font-weight-bold">Address: </p>
+        </div>
+
+        <div class="card-footer text-muted justify-content-center">
+          <a href="" class="font-weight-bold">Edit Profile</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-md-8">
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-order-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-order"
-          aria-selected="true">
-          Orders</a>
-        <a class="nav-item nav-link" id="nav-notification-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-notification"
-          aria-selected="false">
-          Notification</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
-          aria-selected="false">
-          Contact</a>
+    <div class="col-lg-9 col-md-8 outline">
+      <div class="row">
+        <button class="btn btn-outline-success">Vehicles</button>
+        <button class="btn btn-outline-success">Plate Numbers</button>
+        <button class="btn btn-outline-success">Applications</button>
+        <button class="btn btn-outline-success">Notifications</button>
       </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-order-tab"></div>
-      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-notification-tab">...</div>
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+
+      <div class="bg-secondary tab-pane fade show active" id="nav-vehicles" role="tabpanel" aria-labelledby="nav-vehicles-tab">
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr>
+
+              </tr>
+            </tbody>
+
+            <tfoot>
+
+            </tfoot>
+          </table>
+      </div>
+
+      <div class="tab-pane fade" id="nav-plate-numbers" role="tabpanel" aria-labelledby="nav-plate-numbers-tab">
+
+      </div>
+      
+      <div class="tab-pane fade" id="nav-applications" role="tabpanel" aria-labelledby="nav-applications-tab">
+
+      </div>
+      
+      <div class="tab-pane fade" id="nav-orders" role="tabpanel" aria-labelledby="nav-orders-tab">
+
+      </div>
+      
     </div>
   </div>
-</div>

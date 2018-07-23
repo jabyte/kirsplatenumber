@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {CustomerService} from '../services/customer.service';
-import {Customer} from '../models/customer';
-import {error} from 'selenium-webdriver';
+import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../services/customer.service';
+import { Customer } from '../models/customer';
 
 @Component({
   selector: 'app-registration',
@@ -12,13 +11,13 @@ import {error} from 'selenium-webdriver';
 export class RegistrationComponent implements OnInit {
 
   customer = new Customer(
-    null,
-    null,
+    0,
     '',
-    null,
-    null,
-    null,
-    null
+    '',
+    '',
+    '',
+    '',
+    ''
   );
 
   submitted = false;
@@ -29,14 +28,9 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
   }
 
-  registerCustomer(customer: Customer) {
-    this.customerService.postCustomer(customer).subscribe(customer => {
-      console.log(customer);
+  registerCustomer() {
+    this.customerService.postCustomer(this.customer).subscribe(resp => {
+      console.log(resp);
     });
-  }
-
-  // TODO: I'll remove this when I am done.
-  get diagnostic() {
-    return JSON.stringify(this.customer);
   }
 }

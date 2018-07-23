@@ -1,22 +1,28 @@
-<form class="form-signin">
-  <img class="mb-4" src="../../assets/images/logo.png" alt="KIRS Logo">
-  <h4 class="h4 mb-3 font-weight-bold">LOGIN</h4>
-  <div class="form-group">
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-  </div>
+<div class="my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <form class="form-signin" #loginForm>
+        <!-- <img class="mb-4" src="../../assets/images/logo.png" alt="KIRS Logo"> -->
+        <h4 class="h4 text-center my-5 font-weight-bold">LOGIN</h4>
+        
+        <div class="form-group mb-4">
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        </div>
 
-  <div class="form-group">
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  </div>
+        <div class="form-group mb-4">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        </div>
 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-success btn-block mb-5" type="submit" (click)="authenticateUser(user);">Sign in</button>
+        <a class="card-link" routerLink="/register">New user? Register here</a>
+      </form>
+    </div>
   </div>
-  <button class="btn btn-lg btn-success btn-block mb-5" type="submit" (click)="authenticateUser(user);">Sign in</button>
-  <a class="card-link" routerLink="register">New user? Register here</a>
-  <p class="mt-5 mb-3 text-muted">Kano State Internal Revenue Service &copy; 2018</p>
-</form>
+</div>
