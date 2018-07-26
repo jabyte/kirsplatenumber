@@ -5,7 +5,8 @@
         <div class="card-header justify-content-center">
           <div style="border-radius: 50%;">
             <div class="justify-content-center">
-              <img src="../../../assets/img/jabyte.png" class="rounded-circle mx-auto d-block img-fluid img-thumbnail width: 50%" alt="User Pic">
+              <img src="../../../assets/img/jabyte.png"
+                   class="rounded-circle mx-auto d-block img-fluid img-thumbnail width: 40%" alt="User Pic">
               <span class="figure-caption text-center">Change</span>
             </div>
           </div>
@@ -25,44 +26,41 @@
     </div>
 
     <div class="col-lg-9 col-md-8 outline">
-      <div class="row">
-        <button class="btn btn-outline-success">Vehicles</button>
-        <button class="btn btn-outline-success">Plate Numbers</button>
-        <button class="btn btn-outline-success">Applications</button>
-        <button class="btn btn-outline-success">Notifications</button>
-      </div>
+      <!-- Nav tabs -->
+      <ngb-tabset type="pills" [justify]="">
 
-      <div class="bg-secondary tab-pane fade show active" id="nav-vehicles" role="tabpanel" aria-labelledby="nav-vehicles-tab">
-          <table>
-            <thead>
-              <tr>
-                <td></td>
-              </tr>
-            </thead>
-            
-            <tbody>
-              <tr>
+        <ngb-tab title="Vehicles" class="btn-success">
+          <ng-template ngbTabContent>
+            Vehicles
+          </ng-template>
+        </ngb-tab>
 
-              </tr>
-            </tbody>
+        <ngb-tab title="Plate Numbers" class="btn-success">
+          <ng-template ngbTabContent>
+            Plate Numbers
+          </ng-template>
+        </ngb-tab>
 
-            <tfoot>
+        <ngb-tab title="Applications" class="btn-success">
+          <ng-template ngbTabContent>
+            Applications
+          </ng-template>
+        </ngb-tab>
 
-            </tfoot>
-          </table>
-      </div>
+        <ngb-tab>
+          <ng-template ngbTabTitle>Notifications</ng-template>
+          <ng-template ngbTabContent>
+            Notifications
+          </ng-template>
+        </ngb-tab>
 
-      <div class="tab-pane fade" id="nav-plate-numbers" role="tabpanel" aria-labelledby="nav-plate-numbers-tab">
+        <ngb-tab title="Disabled" [disabled]="true">
+          <ng-template ngbTabContent>
+            Disabled
+          </ng-template>
+        </ngb-tab>
 
-      </div>
-      
-      <div class="tab-pane fade" id="nav-applications" role="tabpanel" aria-labelledby="nav-applications-tab">
-
-      </div>
-      
-      <div class="tab-pane fade" id="nav-orders" role="tabpanel" aria-labelledby="nav-orders-tab">
-
-      </div>
-      
+      </ngb-tabset>
     </div>
   </div>
+</div>

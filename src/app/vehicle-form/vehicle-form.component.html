@@ -1,0 +1,218 @@
+<div class="container">
+  <div class="row justify-content-center my-4">
+    <h2 class="">VEHICLE REGISTRATION</h2>
+  </div>
+
+  <div class="row justify-content-center">
+
+    <form action="" class="">
+
+      <section id="engine" [hidden]="hideEngine">
+        <legend>ENGINE DETAILS</legend>
+        <div class="mt-3">
+          <label for="chasisNumber">Chasis Number</label>
+          <input type="text" name="chasisNumber" id="chasisNumber" class="form-control" pattern="[0-9]"
+                 placeholder="Chasis Number" [(ngModel)]="vehicle.chasisNumber"/>
+          <span class="small text-danger" [hidden]="hasError">This field cannot be empty</span>
+        </div>
+        <div class="mt-3">
+          <label for="engineNumber">Engine Number</label>
+          <input type="text" name="engineNumber" id="engineNumber" class="form-control" placeholder="Engine Number"
+                 [(ngModel)]="engine.engineNumber"/>
+          <span class="small text-danger" [hidden]="hasError">This field cannot be empty</span>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mt-3">
+            <label for="engineCapacity">Engine Capacity</label>
+            <input type="text" name="engineCapacity" id="engineCapacity" class="form-control"
+                   placeholder="Engine Capacity" [(ngModel)]="engine.capacity"/>
+            <span class="small text-danger" [hidden]="hasError">This field cannot be empty</span>
+          </div>
+          <div class="col-md-6 mt-3">
+            <label for="cylinderCounter">Cylinder Counts</label>
+            <input type="text" name="cylinderCounter" id="cylinderCounter" class="form-control"
+                   placeholder="Cylinder Counts" [(ngModel)]="engine.cylinderCounts"/>
+            <span class="small text-danger" [hidden]="hasError">This field cannot be empty</span>
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-md-6">
+            <button disabled class="btn btn-block btn-success"><span class="fas fah-previous">Prev</span></button>
+          </div>
+
+          <div class="col-md-6">
+            <button (click)="saveEngine(this.engine); hideEngine=!hideEngine; hidePhysical=!hidePhysical;"
+                    class="btn btn-block btn-success"><span class="fas fah-previous">Next</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="physical" [hidden]="hidePhysical">
+        <legend>PHYSICAL DETAILS</legend>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="v-vendor">MAKE</label>
+            <input type="text" class="form-control" id="make" placeholder="Vehicle Make" [(ngModel)]="physical.make"/>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="v-model">MODEL</label>
+            <input name="v-model" class="form-control" id="model" placeholder="Vehicle Model"
+                   [(ngModel)]="physical.model"/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="type">TYPE</label>
+            <select name="type" class="form-control" id="type"
+                    [ngModel]="physical.type">
+              <option>-Choose Vehicle Type-</option>
+              <option>Car</option>
+              <option>Pickup</option>
+              <option>Truck</option>
+              <option>Van</option>
+              <option>Bus</option>
+              <option>Jeep</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="color">YEAR MANUFACTURED</label>
+            <input type="text" name="color" class="form-control" id="color" placeholder="Vehicle Color"/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="netWeight">NET WEIGHT</label>
+            <input type="number" name="netWeight" class="form-control" id="netWeight"
+                   placeholder="Vehicle Net Weight" [(ngModel)]="physical.netWeight"/>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="v-gross-weight">GROSS WEIGHT</label>
+            <input type="number" name="v-gross-weight" class="form-control" id="v-gross-weight"
+                   placeholder="Vehicle Gross Weight" [(ngModel)]="physical.grossWeight"/>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="v-axle-weight">AXLE WEIGHT</label>
+            <input type="number" name="v-axle-weight" class="form-control" id="v-axle-weight"
+                   placeholder="Vehicle Axle Weight" [(ngModel)]="physical.axleWeight"/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="v-passengers-count">NUMBER OF PASSENGERS</label>
+          <input type="number" class="form-control" name="v-passengers-count" id="v-passengers-count"
+                 placeholder="Number of passengers authorised to carry" [(ngModel)]="physical.passengerCounter"
+          />
+        </div>
+
+        <div class="form-row my-4">
+          <div class="col-md-6">
+            <button (click)="hidePhysical=!hidePhysical; hideEngine=!hideEngine;" class="btn btn-block btn-success">
+              <span class="fas fah-previous">Prev</span></button>
+          </div>
+
+          <div class="col-md-6">
+            <button (click)="savePhysical(this.physical); hidePhysical=!hidePhysical; hideInspection=!hideInspection;"
+                    class="btn btn-block btn-success"><span class="fas fah-previous">Next</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="inspection" [hidden]="hideInspection">
+        <legend>INSPECTION DETAILS</legend>
+
+        <div class="form-row my-4">
+          <label for="v-inspection-cert-number">INSPECTION CERT. NUMBER</label>
+          <input type="text" name="v-inspection-cert-number" class="form-control" id="v-inspection-cert-number"
+                 placeholder="Inspection Certificate Number"
+          />
+        </div>
+
+        <div class="form-row my-4">
+          <label for="v-inspection-cert-date">DATE OBTAINED (CERT.)</label>
+          <input type="date" name="v-inspection-cert-date" class="form-control" id="v-inspection-cert-date"
+                 placeholder="Inspection Certificate Date"
+          />
+        </div>
+
+        <div class="form-row my-4">
+          <div class="col-md-6">
+            <button (click)="hideInspection=!hideInspection; hidePhysical=!hidePhysical"
+                    class="btn btn-block btn-success"><span class="fas fah-previous">Prev</span></button>
+          </div>
+
+          <div class="col-md-6">
+            <button
+              (click)="saveInspection(this.inspection); hideInspection=!hideInspection; hideOwnership=!hideOwnership;"
+              class="btn btn-block btn-success"><span class="fas fah-previous">Next</span></button>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="ownership" [hidden]="hideOwnership">
+        <legend>OWNERSHIP DETAILS</legend>
+        <div class="form-row my-4">
+          <label for="vendor">VENDOR NAME</label>
+          <input type="text" class="form-control" name="vendor" id="vendor" placeholder="Vendor Name">
+        </div>
+
+        <div class="form-row my-4">
+          <label for="year-manufactured">YEAR MANUFACTURED</label>
+          <input type="text" class="form-control" id="man-year" year-manufactured="Year Manufactured"
+                 placeholder="Year Manufactured"
+          />
+        </div>
+
+        <div class="form-row my-4">
+          <label for="v-intended-use">INTENDED USE</label>
+          <select name="v-intended-use" class="form-control" id="v-intended-use" placeholder="Vehicle Intended Use">
+            <option>-Select-</option>
+            <option>Private</option>
+            <option>Commercial</option>
+            <option>Government</option>
+            <option>Military</option>
+          </select>
+        </div>
+
+        <div class="form-row my-4">
+          <div class="form-group col-md-6">
+            <label for="purchaseNature">NATURE OF PURCHASE</label>
+            <select name="purchaseNature" class="form-control" id="purchaseNature">
+              <option>-Select Nature of Purchase-</option>
+              <option>Brand New</option>
+              <option>Used</option>
+              <option>Belgium</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="datePurchase">DATE PURCHASED</label>
+            <input type="date" class="form-control" id="datePurchase" placeholder="Date Purchase">
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-md-6">
+            <button (click)="hideOwnership=!hideOwnership; hideInspection=!hideInspection;"
+                    class="btn btn-block btn-success"><span class="fas fah-previous">Prev</span></button>
+          </div>
+
+          <div class="col-md-6">
+            <button (click)="saveOwnership(this.ownership); hideOwnership=!hideOwnership;"
+                    class="btn btn-block btn-success"><span class="fas fah-previous">Next</span></button>
+          </div>
+        </div>
+
+      </section>
+
+    </form>
+
+  </div>
+</div>

@@ -25,6 +25,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PreviewComponent } from './preview/preview.component';
 import { LandingComponent } from './landing/landing.component';
 import { PlateNumbersComponent } from './plate-numbers/plate-numbers.component';
+import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes = [
   {
@@ -60,6 +62,11 @@ const routes = [
   {
     path: 'physical',
     component: PhysicalComponent
+  },
+
+  {
+    path: 'addvehicle',
+    component: VehicleFormComponent
   },
 
   {
@@ -128,12 +135,14 @@ const routes = [
     PreviewComponent,
     LandingComponent,
     PlateNumbersComponent,
+    VehicleFormComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

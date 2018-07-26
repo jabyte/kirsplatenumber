@@ -10,3 +10,7 @@
 .ng-untouched[required]:not(form) .ng-untouched.required:not(form) {
   border-left: 5px solid #00ff00; /* green */
 }
+
+img{
+  max-width: 100%;
+}
