@@ -4,11 +4,13 @@ export class Inspection {
   certificateDate: string;
   vehicleId: number;
 
+  constructor();
+
   constructor(
-    inspectionId: number = 0,
-    certificateNumber: string,
-    certificateDate: string,
-    vehicleId: number
+    inspectionId: number = null,
+    certificateNumber: string = null,
+    certificateDate: string = null,
+    vehicleId: number = null
   ) {
   }
 }

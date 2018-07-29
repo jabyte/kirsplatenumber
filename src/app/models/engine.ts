@@ -4,11 +4,13 @@ export class Engine {
   capacity: number;
   vehicleId: number;
 
+  constructor();
+
   constructor(
-    engineNumber: string,
-    cylinderCounts: number,
-    capacity: number,
-    vehicleId: number
+    engineNumber: string = null,
+    cylinderCounts: number = null,
+    capacity: number = null,
+    vehicleId: number = null
   ) {
   }
 }
